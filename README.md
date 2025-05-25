@@ -1,146 +1,144 @@
-<<<<<<< HEAD
-# Final-Year-Project-Anxiety-Detection
-=======
-# Anxiety Detection Web App (Urdu Language)
+# 🧠 Anxiety Detection Web App (Urdu Language)
 
-## Overview
+An interactive machine learning-powered web application that detects **anxiety** from natural **Urdu text**. This tool is designed for early detection and awareness of mental health conditions in Urdu-speaking communities, offering predictions for:
 
-This is a *machine learning-powered web application* designed to detect anxiety from *Urdu text*. Users can input natural Urdu sentences describing their feelings or situations, and the app predicts:
+1. **Anxiety Detection** (Yes/No)  
+2. **Anxiety Type** (e.g., Panic Disorder, Phobia, Social Anxiety, Selectivemutism, Agoraphobia, etc.)  
+3. **Anxiety Severity Level** (Mild, Moderate, Severe, Panic)
 
-1. Whether the user is experiencing *anxiety or not* (Binary classification)  
-2. If yes, the *type of anxiety* (Multiclass: e.g., Panic Disorder, Phobia, Selective Mutism, Social Anxiety, etc.)  
-3. The *severity level* of anxiety (Multiclass: Mild, Moderate, Severe, Panic)
-
-The aim is to promote early detection and mental health awareness in *South Asian communities*, offering support in a private and culturally relevant way.
+Built with the vision of reducing stigma and making emotional support more accessible.
 
 ---
 
-## Problem Statement
+## 🌍 Problem Statement
 
-In Urdu-speaking societies, mental health is often stigmatized or ignored due to cultural beliefs and lack of accessible resources. Common barriers include:
+In South Asian societies, mental health is often overlooked due to cultural stigma:
 
-- "We are not mad, why go to a psychologist?"  
-- Shame and silence around emotional well-being  
-- Lack of Urdu-language tools for early detection  
+- "We're not mad—why visit a psychologist?"  
+- Shame and silence around emotional expression  
+- Lack of Urdu-language tools for mental wellness
 
-### Project Goals:
-
-- Allow users to express feelings in *Urdu* and get quick, anonymous anxiety assessments  
-- Use NLP + ML to detect anxiety type and severity  
-- Create a friendly and *non-judgmental* interface  
+This app offers a **safe, anonymous, and culturally relevant** way to talk about anxiety.
 
 ---
 
-## Dataset
+## 🎯 Project Objectives
 
-Since no public dataset was available, we created a *custom dataset* of approx. *12,000 Urdu entries*, labeled with:
-
-- binary: 0 (No Anxiety), 1 (Anxiety)  
-- all_labels: Type of anxiety (e.g., Panic, Phobia, Selective Mutism)  
-- levels: Severity level (Mild, Moderate, Severe, Panic)  
-
-### Annotation Process:
-
-- Labeled manually using real-life examples  
-- Reviewed by psychology students and mental health professionals  
+- 🧠 Let users express emotions in **Urdu**
+- 🔍 Detect **anxiety**, **type**, and **severity**
+- 🧑‍🤝‍🧑 Create a **non-judgmental** interface for all ages
+- 💬 Encourage **open mental health conversations**
 
 ---
 
-## Tech Stack
+## 📊 Dataset
 
-### Frontend
+Since no public Urdu dataset existed, a **custom dataset** was developed with ~12,000 labeled samples:
 
-- *React.js* with *Tailwind CSS*  
-- Responsive and user-friendly design for web and mobile  
-- Emotionally comforting interface  
+- `binary`: 0 = No Anxiety, 1 = Anxiety  
+- `all_labels`: Type of anxiety (e.g., Panic, Phobia)  
+- `levels`: Severity (Mild, Moderate, Severe, Panic)
 
-### Backend
+### 🏷 Annotation:
 
-- *Flask* (or *Django*) — in progress  
-- Handles:  
-  - Urdu text preprocessing  
-  - ML model inference  
-  - API for frontend communication  
-
-### Machine Learning
-
-- *Preprocessing:* Urdu tokenization, stopword removal, TF-IDF vectorization  
-- *Models Used:*  
-  - Binary classification: SVM, LightGBM  
-  - Multiclass classification: XGBoost, LightGBM, SVM  
-- *Training Strategy:*  
-  - Train/Validation/Test Split: 70/10/20  
-  - Evaluation: Accuracy, Weighted F1-score  
-- *Status:* Base models trained; hyperparameter tuning in progress  
+- Based on real-life phrases and scenarios  
+- Reviewed by psychology students & mental health advisors
 
 ---
 
-## Features
+## ⚙️ Tech Stack
 
-- Urdu text input box  
-- Displays:  
-  1. *Anxiety Presence* (Yes/No)  
-  2. *Anxiety Type*  
-  3. *Anxiety Severity Level*  
-- Clear and calm design, no complex medical jargon  
-- Built to be accessible for all age groups  
+### 💻 Frontend
+- **React.js** + **Tailwind CSS**
+- Emotionally comforting design
+- Responsive for mobile & desktop
+
+### 🧠 Machine Learning
+- **Models Used:**  
+  - Binary: `SVM`, `LightGBM`  
+  - Multiclass: `XGBoost`, `LightGBM`, `SVM`
+- **Preprocessing:** Urdu tokenization, stopword removal, TF-IDF
+- **Evaluation Metrics:** Accuracy, F1 Score
+- **Train/Test Split:** 70/10/20
+- **Next Step:** Hyperparameter tuning
+
+### 🖥 Backend (in progress)
+- **Flask** or **Django**
+- Handles model inference & API for predictions
 
 ---
 
-## Future Work
+## 🧪 Features
 
-- Complete backend integration with frontend  
-- Add personal history tracking and visualizations  
-- Mobile app version (React Native / Flutter)  
-- Add multilingual support (Punjabi, Pashto, etc.)  
-- Upgrade to transformer models like *mBERT* or *XLM-RoBERTa*  
+- Urdu text input interface  
+- Shows:
+  - ✔️ Whether the user is experiencing anxiety  
+  - 🧠 Type of anxiety  
+  - 📈 Severity level  
+- Reassuring interface without medical jargon  
+- Anonymous & user-friendly  
 
 ---
 
-## Getting Started
+## 🚀 Future Enhancements
 
-To run this project locally:
+- Complete backend–frontend integration  
+- Mobile version (React Native / Flutter)  
+- Mental health tracking & visualization  
+- Use of transformer models (e.g., **XLM-RoBERTa**, **mBERT**)
 
-### Frontend
+---
 
-bash
+## 📦 How to Run
+
+### 🔧 Frontend
+```bash
 cd frontend
 npm install
 npm start
+```
 
-
-### Backend (in progress)
-
-bash
+### 🔌 Backend (Coming Soon)
+```bash
 cd backend
 pip install -r requirements.txt
 python app.py
-
-
----
-
-## Libraries Used
-
-- *Frontend:* React, Tailwind CSS  
-- *Backend:* Flask (or Django)  
-- *ML/NLP:* scikit-learn, XGBoost, LightGBM, pandas, matplotlib, seaborn  
+```
 
 ---
 
-## About the Developer
+## 🧰 Libraries Used
 
-This project is developed by a final-year *Computer Science student* with a passion for:
+| Area         | Libraries/Tools                                     |
+|--------------|-----------------------------------------------------|
+| Frontend     | React, Tailwind CSS                                 |
+| Backend      | Flask (or Django)                                   |
+| ML/NLP       | scikit-learn, pandas, numPy, spaCy, Urduhack, NLTK  |
+| Visualization| seaborn, matplotlib                                 |
 
-- Mental health advocacy  
-- Urdu NLP  
-- Socially impactful AI solutions  
+---
+
+## 👩‍💻 About the Team
+
+This project was developed as a **Final Year Project (FYP)** by undergraduate students from the Department of Computer Science, GC University, Lahore:
+
+- **Jaweria Fayyaz**  
+- **Maira Tanveer**  
+- **Fareeha Shakoor**  
+
+We are passionate about:
+- Mental health awareness  
+- Urdu NLP & responsible AI  
+- Using technology for social good  
 
 ---
 
-## License
+## 📝 License
 
-This project is open-source for academic and non-commercial use.  
-*Please credit this repository if you use the code or dataset.*
+This project is **open-source for academic & non-commercial use**.  
+Please give credit if you use the dataset or code.
 
 ---
->>>>>>> 929a7e3cf98d2589e8b72039fc2252c1acde432c
+
+> 🧡 *Your feelings are valid. Technology should support you, not judge you.*  
+> — **Happy Mental Health Awareness!**
