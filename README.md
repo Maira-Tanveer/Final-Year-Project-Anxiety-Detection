@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # 🧠 Anxiety Detection Web App (Urdu Language)
 
 An interactive machine learning-powered web application that detects **anxiety** from natural **Urdu text**. This tool is designed for early detection and awareness of mental health conditions in Urdu-speaking communities, offering predictions for:
